@@ -1,7 +1,7 @@
 <!-- index.blade.php (Home) - Versão Otimizada -->
 @extends('layouts.templateDefault')
 
-@section('title', 'TechPixels | Growth Marketing e Desenvolvimento')
+@section('title-page', 'AlgoritmUX | Growth Marketing e Desenvolvimento')
 @section('meta_description', 'Consultoria em Growth, UX e Marketing sob demanda para impulsionar resultados com estratégia e inovação.')
 
 @section('content')

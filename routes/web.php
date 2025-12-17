@@ -6,9 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContatoController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/metodologia', function () {
     return view('metodologia');
@@ -35,8 +33,6 @@ Route::get('/equipe', function () {
 });
 
 Route::post('/enviar-email', [ContatoController::class, 'send'])->name('contact.enviarEmail');
-
-Route::get('/', [HomeController::class, 'index'])->name('home');
 
 // Route::get('/', [GrowthController::class, 'showindex'])->name('home');
 // Route::get('/', [CasesController::class, 'index'])->name('home');
