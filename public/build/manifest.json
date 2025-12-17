@@ -1,0 +1,34 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-8-oPiVz9.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/css/contato.css": {
+    "file": "assets/contato-CzeVcSSu.css",
+    "src": "resources/css/contato.css",
+    "isEntry": true
+  },
+  "resources/css/equipe.css": {
+    "file": "assets/equipe-7XsVz3SH.css",
+    "src": "resources/css/equipe.css",
+    "isEntry": true
+  },
+  "resources/css/home.css": {
+    "file": "assets/home-l0sNRNKZ.js",
+    "name": "home",
+    "src": "resources/css/home.css",
+    "isEntry": true
+  },
+  "resources/css/metodologia.css": {
+    "file": "assets/metodologia-DuGzzUyP.css",
+    "src": "resources/css/metodologia.css",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-CGTZyMKn.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  }
+}
