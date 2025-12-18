@@ -19,6 +19,13 @@ if (PHP_VERSION_ID >= 80500) {
     }, E_DEPRECATED);
 }
 
+// Garantir que em produção sempre use assets compilados (não dev server)
+// Remove arquivo hot se existir em produção
+$env = $_ENV['APP_ENV'] ?? getenv('APP_ENV') ?: 'production';
+if ($env === 'production' && file_exists(__DIR__.'/hot')) {
+    @unlink(__DIR__.'/hot');
+}
+
 // Determine if the application is in maintenance mode...
 if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php')) {
     require $maintenance;
