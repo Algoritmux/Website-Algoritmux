@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Se já está em public/, não fazer nada
+    RewriteCond %{REQUEST_URI} ^/public/
+    RewriteRule ^ - [L]
+    
+    # Permitir acesso direto a arquivos estáticos em public/
+    RewriteCond %{REQUEST_URI} \.(css|js|jpg|jpeg|png|gif|ico|svg|woff|woff2|ttf|eot|mp4|webm|pdf|json|xml|txt|map)$ [NC]
+    RewriteCond %{DOCUMENT_ROOT}/public%{REQUEST_URI} -f
+    RewriteRule ^(.*)$ public/$1 [L]
+    
+    # Redirecionar tudo mais para public/
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+

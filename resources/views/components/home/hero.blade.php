@@ -7,14 +7,15 @@
     <video
       id="bgVideo"
       class="w-full h-full object-cover block"
-      src="{{ asset('videos/fundoHome.mp4') }}"
-      poster="{{ asset('images/hero-fallback.jpg') }}"
       autoplay
       muted
       loop
       playsinline
       preload="auto"
-    ></video>
+    >
+      <source src="{{ asset('videos/fundoHome.mp4') }}" type="video/mp4">
+      <source src="{{ asset('videos/fundoHome.webm') }}" type="video/webm">
+    </video>
   </div>
 
   {{-- Conteúdo --}}
